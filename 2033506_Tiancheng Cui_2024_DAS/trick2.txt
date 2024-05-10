@@ -1,0 +1,31 @@
+# CAS-BP的文件命名有规律，血压值写在了文件名里，用python去读取。
+
+import os
+
+file_paths = []
+
+averages_array_DBP = []
+averages_array_SBP = []
+for file_path in file_paths:
+    file_name = os.path.basename(file_path)
+    values = file_name.split('_')
+
+
+    value3 = (float(values[6])+float(values[4]))/2
+    value4 = (float(values[7])+float(values[5]))/2
+
+
+    averages_array_DBP.append(value3)
+    averages_array_SBP.append(value4)
+    # 按照人数分割成相应个数组，
+
+
+
+
+# averages_personal_DBP=[averages_array_DBP[i:i + 12] for i in range(0, len(averages_array_DBP), 12)]
+# print(averages_personal_DBP)
+# print("---------------------------")
+# #
+# #
+averages_personal_SBP=[averages_array_SBP[i:i + 12] for i in range(0, len(averages_array_SBP), 12)]
+print(averages_personal_SBP)

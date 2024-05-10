@@ -1,0 +1,26 @@
+import os
+
+# 因为cas-bp的文件结构有点复杂，一个个点开复制粘贴很慢，所以考虑用python辅助一下。
+
+# 包含文件路径的列表
+file_paths = [ ]
+
+# # 这段代码用来提取包含所需要的记录的最小文件夹
+# for folder_path in file_paths:
+#     if os.path.isdir(folder_path):
+#         for sub_folder in os.listdir(folder_path):
+#             sub_folder_path = os.path.join(folder_path, sub_folder)
+#             for small_folder in os.listdir(sub_folder_path):
+#                 small_folder_path = os.path.join(sub_folder_path, small_folder)
+#                 if os.path.isdir(small_folder_path):
+#                     print('r'+"\'"+small_folder_path+"\'"+',')  # 这里可以根据需要对文件夹进行操作
+#
+# 这段代码与上面的类似，但是结果是用来放到Matlab里去运行的
+# for folder_path in file_paths:
+#     if os.path.isdir(folder_path):
+#         for sub_folder in os.listdir(folder_path):
+#             sub_folder_path = os.path.join(folder_path, sub_folder)
+#             for small_folder in os.listdir(sub_folder_path):
+#                 small_folder_path = os.path.join(sub_folder_path, small_folder)
+#                 if os.path.isdir(small_folder_path):
+#                     print("\'"+small_folder_path+"\ppg_ecg.csv'"+',')  # 这里可以根据需要对文件夹进行操作
